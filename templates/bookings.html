@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bookings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Boarding</th>
+                <th>Destination</th>
+                <th>Departing</th>
+                <th>Seat Type</th>
+                <th>Adults</th>
+                <th>Children</th>
+                <th>Travel Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking['boarding'] }}</td>
+                    <td>{{ booking['destination'] }}</td>
+                    <td>{{ booking['departing'] }}</td>
+                    <td>{{ booking['seat_type'] }}</td>
+                    <td>{{ booking['adults'] }}</td>
+                    <td>{{ booking['children'] }}</td>
+                    <td>{{ booking['travel_class'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
