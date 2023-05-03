@@ -88,6 +88,9 @@ def register():
 def home():
     return "home page"
 '''
+@app.route('/landing')
+def home():
+    return render_template('landing.html')
 
 @app.route('/booking', methods=['GET', 'POST'])
 def booking():
