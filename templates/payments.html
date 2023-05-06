@@ -1,0 +1,177 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <title>Payments</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+            <style>
+            .form-style-1 {
+                margin:10px auto;
+                max-width: 400px;
+                padding: 20px 12px 10px 20px;
+                font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            }
+            .form-style-1 li {
+                padding: 0;
+                display: block;
+                list-style: none;
+                margin: 10px 0 0 0;
+            }
+            .form-style-1 label{
+                margin:0 0 3px 0;
+                padding:0px;
+                display:block;
+                font-weight: bold;
+            }
+            .form-style-1 input[type=text], 
+            .form-style-1 input[type=date],
+            .form-style-1 input[type=datetime],
+            .form-style-1 input[type=integer],
+            .form-style-1 input[type=search],
+            .form-style-1 input[type=time],
+            .form-style-1 input[type=url],
+            .form-style-1 input[type=email],
+            textarea, 
+     
+            .form-style-1 input[type=text]:focus, 
+            .form-style-1 input[type=date]:focus,
+            .form-style-1 input[type=datetime]:focus,
+            .form-style-1 input[type=integer]:focus,
+            .form-style-1 input[type=search]:focus,
+            .form-style-1 input[type=time]:focus,
+            .form-style-1 input[type=url]:focus,
+            .form-style-1 input[type=email]:focus,
+            .form-style-1 textarea:focus, 
+            .form-style-1 select:focus{
+                -moz-box-shadow: 0 0 8px #88D5E9;
+                -webkit-box-shadow: 0 0 8px #88D5E9;
+                box-shadow: 0 0 8px #88D5E9;
+                border: 1px solid #88D5E9;
+            }
+            .form-style-1 .field-divided{
+                width: 49%;
+            }
+
+            .form-style-1 .field-long{
+                width: 100%;
+            }
+            .form-style-1 .field-select{
+                width: 100%;
+            }
+            .form-style-1 .field-textarea{
+                height: 100px;
+            }
+            .form-style-1 input[type=submit], .form-style-1 input[type=button]{
+                background: #4B99AD;
+                padding: 8px 15px 8px 15px;
+                border: none;
+                color: #fff;
+            }
+            .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+                background: #4691A4;
+                box-shadow:none;
+                -moz-box-shadow:none;
+                -webkit-box-shadow:none;
+            }
+            .form-style-1 .required{
+                color:red;
+            }
+
+
+
+            </style>
+        
+         </head>
+        <body style="background-color: black;">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand" href="#page-top">Go Bus</a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="ftco-section" style="background-color: aliceblue;">
+                <div class="container">
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-10">
+                            <div class="wrap d-md-flex">
+         
+                          </div>
+
+                              <div class="d-flex">
+                                  <div class="w-100">
+                                      <h3 align="center">Payment Details</h3>
+                                  </div>
+                               </div>
+
+
+		<div align="center">
+		<div align="center">
+            <!--Do not touch-->
+			<h2 class="word">
+				<form action="{{ url_for('payments') }}" method="post" class="form-style-1">
+                        <label for="customerName">Customer Name:</label>
+                        <input type="text" id="customerName" name="customerName" value="{{customerName}}" >
+                
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" >{{address}}</textarea>
+
+                        <label for="Noc">Name on card:</label>
+                        <input type="text" id="noc" name="noc" value="{{noc}}" >
+
+                        <label for="Cno">Card Number:</label>
+                        <input type="text" id="Cno" name="Cno" value="{{Cno}}" >
+
+                        <label for="CVV">CVV:</label>
+                        <input type="text" id="CVV" name="CVV" value="{{CVV}}" >
+                
+                        <label for="amount">Amount:</label>
+                        <input type="integer" id="amount" name="amount"  value="{{amount}}" >
+                        <br>
+                
+                        <label for="paymentDate">Payment Date:</label>
+                        <input type="text" id="paymentDate" name="paymentDate" value="{{paymentDate}}" >
+                        
+                
+                        <!-- Other payment information such as transaction ID or payment method can also be displayed here -->
+                        <br>
+                        <br>
+                
+                        <input type="submit" value="Submit">
+                    </form>
+                
+
+				
+			</h2>
+            <!--Do not touch-->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js//popper.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
+

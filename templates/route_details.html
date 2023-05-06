@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="operatorstyle.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/operatorstyle.css') }}">
+   <title>Vehicle</title>
+</head>
+<body>
+    <div class="container">
+        <header>Vehicle Details</header>
+	<div class="container">
+		<div class="row">
+			<div class="control-group" id="fields">
+				<div class="controls">
+					<form role="form" autocomplete="off" method="POST">
+						<div class="entry input-group col-3">
+							<input class="form-control" name="source" id="source" type="text" placeholder="Source" />
+						</div>
+
+						<div class="entry input-group col-3">
+							<input class="form-control" name="destination"id="destination" type="text" placeholder="Destination" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="distance" id ="distance" distancetype="text" placeholder="Total Distance" />
+						</div>
+
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop" id = "stop" type="text" placeholder=" Number Stop" />
+						</div>
+
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop1" id = "stop1" type="text" placeholder="Stop1" />
+						</div>
+
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop2" id = "stop2" type="text" placeholder="Stop2" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop3" id = "stop3" type="text" placeholder="Stop3" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop4" id = "stop4" type="text" placeholder="Stop4" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop5" id = "stop5" type="text" placeholder="Stop5" />
+						</div>
+
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop6" id = "stop6" type="text" placeholder="Stop6" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop7" id = "stop7" type="text" placeholder="Stop7" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop8" id = "stop8" type="text" placeholder="Stop8" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop9" id = "stop9" type="text" placeholder="Stop9" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop10" id = "stop10" type="text" placeholder="Stop10" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop11" id = "stop11" type="text" placeholder="Stop11" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop12" id = "stop12" type="text" placeholder="Stop12" />
+						</div>
+						<div class="entry input-group col-3">
+							<input class="form-control" name="stop13" id = "stop13" type="text" placeholder="Stop13" />
+						</div>
+
+
+						
+						<br>
+						<button class="btn btn-success">Proceed</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div></div>
+	<script src="https://kit.fontawesome.com/1ad43aed0a.js" crossorigin="anonymous"></script>
+	<!-- Adding jQuery library CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+	<!-- <script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/bootstrap.esm.min.js"></script> -->
+	<!-- Adding JavaScript -->
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+<script>
+$(function () {
+	$(document).on('click', '.btn-add', function (e) {
+		e.preventDefault();
+
+		var controlForm = $('.controls form:first'),
+			currentEntry = $(this).parents('.entry:first'),
+			newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+		newEntry.find('input').val('');
+		controlForm.find('.entry:not(:last) .btn-add')
+			.removeClass('btn-add').addClass('btn-remove')
+			.removeClass('btn-success').addClass('btn-danger')
+			.html('<span class="glyphicon glyphicon-minus"></span>');
+	}).on('click', '.btn-remove', function (e) {
+		$(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+</script>
+
+<script src="{{ url_for('static', filename='js/operatorscript.js') }}"></script>
+</body>
+</html>

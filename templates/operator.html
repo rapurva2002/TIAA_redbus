@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <style>#operator {
+        color: black;
+      }</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">GoBus</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#!">News Headlines</a></li>
+          <li><a class="nav-link scrollto " href="#!">Search</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services-mf pt-5 route">
+    <div class="container">
+        <div class ="row">
+            <div class="col-sm-6">
+                <div class="about-img"><br><br>
+                    <img src="{{ url_for('static', filename='assets/img/tag2.jpg') }}" class="img-fluid rounded b-shadow-a" alt=""><br><br>
+                   <center> <img src="{{ url_for('static', filename='assets/img/algo.png') }}" class="img-fluid rounded b-shadow-a" alt=""><br><br></center>
+                    <img src="{{ url_for('static', filename='assets/img/tag3.jpg') }}" class="img-fluid rounded b-shadow-a" alt="">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box-shadow-full">
+                  <p class="lead">
+                    As a bus seat booking agency, we understand the importance of hassle-free travel for our customers. We strive to provide a comfortable and stress-free journey for everyone who chooses to book their bus seats with us.<br><br>
+
+We understand that traveling by bus can sometimes be a daunting task, especially if you are traveling to a new destination or are unfamiliar with the bus routes. That's why we ensure that our customers have access to all the information they need to plan their journey, including route maps, schedules, and fare information.<br><br>
+
+Our booking process is designed to be simple and easy, with customers able to book their bus seats online or through our mobile app. We also provide a range of payment options to suit our customers' needs, including credit and debit cards, net banking, and mobile wallets.<br><br>
+
+When you travel with us, you can be sure of a safe and comfortable journey. We work with a network of reputable bus operators who maintain their vehicles to the highest standards, ensuring that you can relax and enjoy your journey without worrying about any mechanical issues.<br><br>
+
+Our customer support team is always available to assist you with any queries or concerns you may have before, during, or after your journey. We believe in providing exceptional customer service, and our team is dedicated to ensuring that your experience with us is a pleasant one.<br><br>
+
+In summary, our focus on hassle-free travel makes us the ideal choice for anyone looking to book their bus seats. With a simple booking process, reliable service, and excellent customer support, we make sure that your journey is as comfortable and stress-free as possible.<br><br>
+                </p></div></div></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div class="section-counter paralax-mf bg-image" style="background-image: url({{ url_for('static', filename='assets/img/counters-bg.jpg') }})">
+
+        <div class="overlay-mf"></div>
+        <div class="container position-relative">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">Are you a passenger? Looking for hassle-free travel with Us?</h2>
+                    <hr class="divider divider-light" />
+                    <a class="btn btn-light btn-xl" href="{{ url_for('login') }}">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div></main>
+<!-- End About Section -->
+<section id="services" class="services-mf pt-5 route">
+    <div class="container">
+        <div class="text-center" id="operator" style="color: black;">
+            <h2 class="text mt-0">Are you a Operator? Looking for good passenger experience with Us?</h2>
+            <hr class="divider divider-light" />
+            <a class="btn btn-light btn-xl" href="{{ url_for('login') }}">Get Started!</a>
+        </div>
+    </div>
+        
+  </section><!-- End Services Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>Go Bus</strong>. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/typed.js/typed.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+
+</body>
+
+</html>
